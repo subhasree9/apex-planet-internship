@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products • Filter & Sort</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">Subhasree</a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="todo.html">To-Do App</a>
+    <a class="active" href="products.html">Products</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Product Listing</h2>
+
+    <div class="toolbar">
+      <input id="q" type="text" placeholder="Search products…" />
+      <select id="cat">
+        <option value="all">All Categories</option>
+      </select>
+      <label class="range">
+        Min ₹<input id="min" type="number" value="0" min="0" step="100" />
+      </label>
+      <label class="range">
+        Max ₹<input id="max" type="number" value="100000" min="0" step="100" />
+      </label>
+      <select id="sort">
+        <option value="ratingDesc">Sort: Rating ↓</option>
+        <option value="priceAsc">Price ↑</option>
+        <option value="priceDesc">Price ↓</option>
+        <option value="nameAsc">Name A→Z</option>
+      </select>
+    </div>
+
+    <div id="grid" class="grid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Demo dataset rendered with vanilla JS.</p>
+</footer>
+
+<script src="products.js"></script>
+</body>
+</html>

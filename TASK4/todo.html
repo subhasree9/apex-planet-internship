@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do / Notes • LocalStorage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">Subhasree</a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a class="active" href="todo.html">To-Do App</a>
+    <a href="products.html">Products</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>To-Do / Notes</h2>
+    <form id="todoForm" class="form form-inline">
+      <input id="todoText" type="text" placeholder="Add a task or note…" required />
+      <select id="priority">
+        <option value="normal">Priority: Normal</option>
+        <option value="high">Priority: High</option>
+        <option value="low">Priority: Low</option>
+      </select>
+      <button class="btn" type="submit">Add</button>
+    </form>
+
+    <div class="toolbar">
+      <input id="search" type="text" placeholder="Search…" />
+      <select id="filterState">
+        <option value="all">All</option>
+        <option value="open">Open</option>
+        <option value="done">Done</option>
+      </select>
+      <button id="clearDone" class="btn btn-ghost">Clear Done</button>
+    </div>
+
+    <ul id="todoList" class="list"></ul>
+    <p class="muted" id="count"></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Data persists in your browser via <code>localStorage</code>.</p>
+</footer>
+
+<script src="todo.js"></script>
+</body>
+</html>
